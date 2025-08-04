@@ -8,53 +8,59 @@
 @layer base {
   :root {
     /* Core Background & Foreground */
-    --background: 222 84% 5%;
+    --background: 220 30% 3%;
     --foreground: 210 40% 98%;
 
     /* Card System */
-    --card: 222 84% 7%;
+    --card: 220 25% 8%;
     --card-foreground: 210 40% 98%;
 
     /* Popover */
-    --popover: 222 84% 7%;
+    --popover: 220 25% 8%;
     --popover-foreground: 210 40% 98%;
 
-    /* Brand Colors - Electric Tech Theme */
-    --primary: 195 100% 50%;        /* Electric Blue */
-    --primary-foreground: 222 84% 5%;
-    --primary-glow: 195 100% 60%;
+    /* Vibrant Brand Colors - AI-Inspired */
+    --primary: 280 100% 65%;         /* Electric Purple */
+    --primary-foreground: 220 30% 3%;
+    --primary-glow: 280 100% 75%;
 
-    --secondary: 162 100% 50%;       /* Electric Teal */
-    --secondary-foreground: 222 84% 5%;
-    --secondary-glow: 162 100% 60%;
+    --secondary: 320 100% 60%;       /* Electric Pink */
+    --secondary-foreground: 220 30% 3%;
+    --secondary-glow: 320 100% 70%;
+
+    --accent: 20 100% 65%;           /* Electric Orange */
+    --accent-foreground: 220 30% 3%;
 
     /* Neutral Tones */
-    --muted: 215 25% 15%;
-    --muted-foreground: 217 10% 60%;
-
-    --accent: 220 25% 20%;
-    --accent-foreground: 210 40% 98%;
+    --muted: 220 20% 15%;
+    --muted-foreground: 220 15% 65%;
 
     /* System Colors */
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 215 25% 15%;
-    --input: 215 25% 12%;
-    --ring: 195 100% 50%;
+    --border: 220 20% 18%;
+    --input: 220 25% 12%;
+    --ring: 280 100% 65%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Portfolio-Specific Design Tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(195 100% 50%), hsl(162 100% 50%));
-    --gradient-dark: linear-gradient(180deg, hsl(222 84% 5%), hsl(222 84% 8%));
-    --gradient-card: linear-gradient(145deg, hsl(222 84% 7%), hsl(215 25% 12%));
-    --gradient-glow: radial-gradient(circle at center, hsl(195 100% 50% / 0.15), transparent 70%);
+    /* Dynamic AI-Inspired Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(280 100% 65%), hsl(320 100% 60%), hsl(20 100% 65%));
+    --gradient-secondary: linear-gradient(45deg, hsl(240 100% 50%), hsl(280 100% 65%));
+    --gradient-accent: linear-gradient(90deg, hsl(320 100% 60%), hsl(20 100% 65%));
+    --gradient-dark: linear-gradient(135deg, hsl(220 30% 3%), hsl(220 25% 8%), hsl(230 20% 6%));
+    --gradient-card: linear-gradient(145deg, hsl(220 25% 8% / 0.8), hsl(220 20% 12% / 0.6));
+    --gradient-glow: radial-gradient(ellipse at center, hsl(280 100% 65% / 0.2), hsl(320 100% 60% / 0.1), transparent 70%);
+    --gradient-hero: linear-gradient(135deg, hsl(280 100% 20%), hsl(320 100% 15%), hsl(20 100% 20%));
     
-    /* Shadows & Effects */
-    --shadow-glow: 0 0 30px hsl(195 100% 50% / 0.3);
-    --shadow-card: 0 10px 30px -5px hsl(222 84% 3% / 0.5);
-    --shadow-elevated: 0 20px 50px -10px hsl(222 84% 3% / 0.8);
+    /* Dynamic Shadows & Effects */
+    --shadow-glow: 0 0 40px hsl(280 100% 65% / 0.4), 0 0 80px hsl(320 100% 60% / 0.2);
+    --shadow-card: 0 20px 40px -10px hsl(220 30% 3% / 0.8), 0 0 25px hsl(280 100% 65% / 0.1);
+    --shadow-elevated: 0 30px 60px -10px hsl(220 30% 3% / 0.9), 0 0 50px hsl(280 100% 65% / 0.3);
+    --shadow-primary: 0 0 30px hsl(280 100% 65% / 0.5);
+    --shadow-secondary: 0 0 30px hsl(320 100% 60% / 0.5);
+    --shadow-accent: 0 0 30px hsl(20 100% 65% / 0.5);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

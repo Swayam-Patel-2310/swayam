@@ -1,80 +1,98 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Github, ExternalLink, Brain, BarChart3, Heart, TrendingUp, Users, Bot, Wine, Star } from 'lucide-react';
+import { Github, ExternalLink, Brain, BarChart3, Heart, TrendingUp, Users, Bot, Wine, Star, Car, MapPin, Briefcase, Database, LineChart, MessageSquare } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
     {
-      title: "Smart Diagnosis: Colon Cancer Cell Classification",
-      description: "Deep learning model for automated classification of colon cancer cells using computer vision techniques. Achieved 94% accuracy with CNN architecture.",
-      skills: ["TensorFlow", "Computer Vision", "Python", "CNN"],
-      icon: <Heart className="w-6 h-6" />,
+      title: "Focus Bear Cohort Analytics Dashboard",
+      description: "Industry capstone project with High Distinction grade. Led development of retention breakdown tab using Python, Dash, and Plotly. Created cohort-based analytics for improving user engagement and product strategy. Adapted visual components for static HTML export using Playwright for AWS deployment.",
+      skills: ["Python", "Dash", "Plotly", "AWS", "Playwright", "Data Storytelling"],
+      icon: <TrendingUp className="w-6 h-6" />,
       featured: true,
-      github: "#",
-      demo: "#"
+      github: "https://github.com/Swayam-Patel-2310",
+      demo: ""
+    },
+    {
+      title: "Smart Diagnosis: Colon Cancer Cell Classification",
+      description: "Built end-to-end ML pipeline for cancer diagnosis using colon histopathology images. Developed CNNs for binary and multiclass classification with TensorFlow/Keras. Handled patient-level data splitting, class imbalance via augmentation, and comprehensive performance evaluation.",
+      skills: ["TensorFlow", "Keras", "Computer Vision", "Healthcare AI", "CNN"],
+      icon: <Brain className="w-6 h-6" />,
+      featured: true,
+      github: "https://github.com/Swayam-Patel-2310/Smart-Diagnosis-Colon-Cancer-Cell-Classification",
+      demo: ""
     },
     {
       title: "SmartJobMatch Web App",
-      description: "Full-stack application that matches job seekers with relevant opportunities using NLP and recommendation algorithms.",
-      skills: ["Flask", "NLP", "Scikit-learn", "PostgreSQL"],
-      icon: <Bot className="w-6 h-6" />,
+      description: "Created Flask-based web platform matching job seekers and employers. Developed recommendation engine using NLP and ML that recommends job categories based on descriptions. Integrated TF-IDF + cosine similarity with user-friendly UI.",
+      skills: ["Flask", "NLP", "TF-IDF", "Machine Learning", "Web Development"],
+      icon: <Briefcase className="w-6 h-6" />,
       featured: true,
-      github: "#",
-      demo: "#"
+      github: "https://github.com/Swayam-Patel-2310/SmartJobMatch-WebApp-Flask-ML-Recommendation",
+      demo: ""
     },
     {
-      title: "HDFS Log Monitoring with Apache Spark",
-      description: "Real-time log analysis system for monitoring HDFS performance and detecting anomalies using Spark Streaming.",
-      skills: ["Apache Spark", "Hadoop", "Scala", "Kafka"],
-      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Tradewise Stock Trading Platform",
+      description: "Created trading insights platform using ARIMA models for stock price forecasting and sentiment analysis with TextBlob and FinBERT. Integrated yfinance and NewsAPI for real-time data. Deployed on Streamlit with Plotly visualizations.",
+      skills: ["ARIMA", "Streamlit", "FinBERT", "Time Series", "Sentiment Analysis"],
+      icon: <LineChart className="w-6 h-6" />,
       featured: true,
-      github: "#",
-      demo: "#"
+      github: "https://github.com/Swayam-Patel-2310/Tradewise-Stock-Trading-Platform",
+      demo: ""
     },
     {
-      title: "Tradewise Stock Forecasting",
-      description: "Time series forecasting model for stock price prediction using LSTM networks and technical indicators.",
-      skills: ["LSTM", "Time Series", "TensorFlow", "Finance"],
-      icon: <TrendingUp className="w-6 h-6" />,
+      title: "HDFS Streaming Monitor with Spark",
+      description: "Developed Scala application using Apache Spark Streaming to monitor HDFS logs in real-time. Implemented word frequency tracking, co-occurrence statistics, and temporal patterns using updateStateByKey with fault-tolerant streaming architecture.",
+      skills: ["Apache Spark", "Scala", "HDFS", "Real-time Analytics", "Big Data"],
+      icon: <Database className="w-6 h-6" />,
       featured: false,
-      github: "#",
-      demo: "#"
-    },
-    {
-      title: "Focus Bear Cohort Analytics Dashboard",
-      description: "Industry project creating interactive dashboards for user behavior analysis and cohort tracking.",
-      skills: ["Power BI", "SQL", "Analytics", "Visualization"],
-      icon: <Users className="w-6 h-6" />,
-      featured: false,
-      github: "#",
-      demo: "#"
-    },
-    {
-      title: "Movie Recommender System",
-      description: "Collaborative filtering system with content-based recommendations using matrix factorization.",
-      skills: ["Collaborative Filtering", "Python", "Pandas", "ML"],
-      icon: <Star className="w-6 h-6" />,
-      featured: false,
-      github: "#",
-      demo: "#"
-    },
-    {
-      title: "Wine Quality Modeling",
-      description: "Classification model predicting wine quality based on chemical properties using ensemble methods.",
-      skills: ["Random Forest", "Feature Engineering", "R", "Classification"],
-      icon: <Wine className="w-6 h-6" />,
-      featured: false,
-      github: "#",
-      demo: "#"
+      github: "https://github.com/Swayam-Patel-2310/HDFS-Streaming-Monitor-Spark",
+      demo: ""
     },
     {
       title: "Prompt Engineering Social Media Analysis",
-      description: "NLP pipeline for sentiment analysis and trend detection in social media data using advanced prompt engineering.",
-      skills: ["NLP", "Prompt Engineering", "Sentiment Analysis", "API"],
-      icon: <Brain className="w-6 h-6" />,
+      description: "Explored public discussions around prompt engineering using Reddit and YouTube data. Implemented comprehensive sentiment analysis using VADER and custom wordlists. Applied LDA topic modeling and social network analysis using NetworkX.",
+      skills: ["NLP", "LDA", "NetworkX", "Sentiment Analysis", "Topic Modeling"],
+      icon: <MessageSquare className="w-6 h-6" />,
       featured: false,
-      github: "#",
-      demo: "#"
+      github: "https://github.com/Swayam-Patel-2310/Prompt-Engineering-Social-Media-Analysis",
+      demo: ""
+    },
+    {
+      title: "Movie Recommender System",
+      description: "Built recommendation engine using MovieLens 1M dataset with user-based and item-based KNN collaborative filtering. Developed custom hybrid recommender and benchmarked accuracy using RMSE, MAE, and NDCG metrics.",
+      skills: ["KNN", "Collaborative Filtering", "Hybrid Models", "MovieLens", "Python"],
+      icon: <Users className="w-6 h-6" />,
+      featured: false,
+      github: "https://github.com/Swayam-Patel-2310/Movie-Recommender-System-KNN-Based-Collaborative-Filtering-Custom-Model",
+      demo: ""
+    },
+    {
+      title: "Hadoop Taxi Trip Analytics",
+      description: "Built data pipeline for analyzing NYC taxi trip data using Python-based MapReduce jobs on Hadoop. Implemented clustering (k-means, k-medoids), trip categorization, and company-level aggregation. Designed for AWS EMR deployment.",
+      skills: ["Hadoop", "MapReduce", "K-means", "AWS EMR", "Big Data"],
+      icon: <Car className="w-6 h-6" />,
+      featured: false,
+      github: "https://github.com/Swayam-Patel-2310/Hadoop-Taxi-Trip-Analytics",
+      demo: ""
+    },
+    {
+      title: "Wine Quality Modeling",
+      description: "Performed exploratory data analysis and predictive modeling on wine quality datasets. Built linear regression, classification (logistic, decision tree), and clustering (KMeans) models with parameter tuning and model comparison.",
+      skills: ["Classification", "Clustering", "Linear Regression", "Scikit-learn", "EDA"],
+      icon: <BarChart3 className="w-6 h-6" />,
+      featured: false,
+      github: "https://github.com/Swayam-Patel-2310/Wine-Quality-Modelling-Classification-Clustering-Linear-Analysis-with-Python",
+      demo: ""
+    },
+    {
+      title: "Maze Pathfinder Algorithms",
+      description: "Implemented Python algorithms for generating and solving weighted mazes. Designed mazes using Kruskal's algorithm and solved paths with Dijkstra's algorithm, brute-force search, and greedy heuristics with performance comparison.",
+      skills: ["Algorithms", "Dijkstra", "Kruskal", "Graph Theory", "Python"],
+      icon: <MapPin className="w-6 h-6" />,
+      featured: false,
+      github: "https://github.com/Swayam-Patel-2310/Maze-Pathfinder-Algorithms",
+      demo: ""
     }
   ];
 

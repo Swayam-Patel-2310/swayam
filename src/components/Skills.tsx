@@ -169,6 +169,77 @@ const Skills = () => {
           </div>
         </div>
 
+        {/* Certifications */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold mb-8 text-center">Certifications & Achievements</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                title: "AWS Academy Graduate",
+                issuer: "Amazon Web Services (AWS)",
+                date: "Jul 2025",
+                credential: "Cloud Foundations",
+                skills: ["Cloud Computing", "AWS Architecture"]
+              },
+              {
+                title: "AWS Sustainable Impact Program",
+                issuer: "Practera",
+                date: "Jul 2024",
+                credential: "OPENBADGEPASSPORT-764645",
+                skills: ["Cloud Solutions", "Sustainability", "Team Collaboration"]
+              },
+              {
+                title: "Technology Job Simulation",
+                issuer: "Deloitte Australia",
+                date: "Jul 2024",
+                credential: "bf87Ff4cAXK4ZkYX6",
+                skills: ["Problem Solving", "Technology Consulting"]
+              },
+              {
+                title: "AWS Cloud Technical Essentials",
+                issuer: "Amazon Web Services (AWS)",
+                date: "Jun 2024",
+                credential: "UVPE2N5VR4DV",
+                skills: ["AWS IAM", "Networking", "Cloud Computing", "Security"]
+              },
+              {
+                title: "Data Analysis and Visualization",
+                issuer: "Microsoft",
+                date: "Apr 2024",
+                credential: "YX74UYC8HPIC",
+                skills: ["Power BI", "Data Analysis", "Dashboard Design"]
+              },
+              {
+                title: "Peer Mentoring",
+                issuer: "RMIT University",
+                date: "Feb 2024",
+                credential: "Leadership Program",
+                skills: ["Leadership", "Communication", "Mentoring"]
+              }
+            ].map((cert, index) => (
+              <Card key={index} className="card-glow p-4">
+                <div className="space-y-3">
+                  <div>
+                    <h4 className="font-semibold text-sm">{cert.title}</h4>
+                    <p className="text-xs text-muted-foreground">{cert.issuer}</p>
+                    <p className="text-xs text-muted-foreground">Issued {cert.date}</p>
+                  </div>
+                  <div className="flex flex-wrap gap-1">
+                    {cert.skills.map((skill, skillIndex) => (
+                      <span 
+                        key={skillIndex}
+                        className="px-2 py-1 bg-muted text-xs rounded-full"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+
         {/* Specializations */}
         <div className="mt-16 grid md:grid-cols-2 gap-8">
           <Card className="card-glow p-6">

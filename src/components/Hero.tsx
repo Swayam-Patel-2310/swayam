@@ -62,7 +62,7 @@ const Hero = () => {
             {/* Social Links */}
             <div className="flex items-center space-x-6 pt-4">
               <a 
-                href="https://github.com/swayampatel" 
+                href="https://github.com/Swayam-Patel-2310" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -70,7 +70,7 @@ const Hero = () => {
                 <Github className="w-6 h-6" />
               </a>
               <a 
-                href="https://linkedin.com/in/swayampatel" 
+                href="https://www.linkedin.com/in/swayammpatel" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors duration-200"

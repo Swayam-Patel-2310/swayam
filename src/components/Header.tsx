@@ -59,7 +59,7 @@ const Header = () => {
               className="text-muted-foreground hover:text-primary"
               asChild
             >
-              <a href="https://github.com/swayampatel" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Swayam-Patel-2310" target="_blank" rel="noopener noreferrer">
                 <Github className="w-5 h-5" />
               </a>
             </Button>
@@ -69,7 +69,7 @@ const Header = () => {
               className="text-muted-foreground hover:text-primary"
               asChild
             >
-              <a href="https://linkedin.com/in/swayampatel" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/swayammpatel" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5" />
               </a>
             </Button>
@@ -115,7 +115,7 @@ const Header = () => {
                   className="text-muted-foreground hover:text-primary"
                   asChild
                 >
-                  <a href="https://github.com/swayampatel" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/Swayam-Patel-2310" target="_blank" rel="noopener noreferrer">
                     <Github className="w-5 h-5" />
                   </a>
                 </Button>
@@ -125,7 +125,7 @@ const Header = () => {
                   className="text-muted-foreground hover:text-primary"
                   asChild
                 >
-                  <a href="https://linkedin.com/in/swayampatel" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/swayammpatel" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="w-5 h-5" />
                   </a>
                 </Button>

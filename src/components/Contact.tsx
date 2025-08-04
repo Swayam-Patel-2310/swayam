@@ -44,8 +44,8 @@ const Contact = () => {
     {
       icon: <Mail className="w-5 h-5" />,
       title: "Email",
-      value: "swayam.patel@student.rmit.edu.au",
-      action: "mailto:swayam.patel@student.rmit.edu.au"
+      value: "swayammpatel2310@gmail.com",
+      action: "mailto:swayammpatel2310@gmail.com"
     },
     {
       icon: <MapPin className="w-5 h-5" />,
@@ -65,13 +65,13 @@ const Contact = () => {
     {
       name: "LinkedIn",
       icon: <Linkedin className="w-5 h-5" />,
-      url: "https://linkedin.com/in/swayampatel",
+      url: "https://www.linkedin.com/in/swayammpatel",
       color: "hover:text-blue-500"
     },
     {
       name: "GitHub",
       icon: <Github className="w-5 h-5" />,
-      url: "https://github.com/swayampatel",
+      url: "https://github.com/Swayam-Patel-2310",
       color: "hover:text-primary"
     }
   ];

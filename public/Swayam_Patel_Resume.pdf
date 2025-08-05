@@ -1,0 +1,207 @@
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/MediaBox [0 0 612 792]
+/Contents 4 0 R
+/Resources <<
+/Font <<
+/F1 5 0 R
+/F2 6 0 R
+>>
+>>
+>>
+endobj
+
+4 0 obj
+<<
+/Length 3500
+>>
+stream
+BT
+/F2 16 Tf
+50 750 Td
+(Swayam Patel) Tj
+0 -20 Td
+/F1 10 Tf
+(swayammpatel2310@gmail.com | +61 478 009 789 | Melbourne, Australia | LinkedIn | GitHub) Tj
+
+0 -30 Td
+/F2 14 Tf
+(EDUCATION) Tj
+0 -15 Td
+/F2 12 Tf
+(Bachelor of Data Science (Major in Advanced Data Science) [December, 2025]) Tj
+0 -12 Td
+/F1 10 Tf
+(RMIT University, Melbourne) Tj
+
+0 -25 Td
+/F2 14 Tf
+(SKILLS) Tj
+0 -15 Td
+/F1 10 Tf
+(Programming Languages: Python, R, Java, SQL) Tj
+0 -12 Td
+(Libraries: Numpy, Pandas, Flask, Scikit-Learn, TensorFlow, Keras) Tj
+0 -12 Td
+(Software: MS Excel, Power BI, Shinyapps, Git) Tj
+0 -12 Td
+(Cloud Distributed Frameworks: AWS, Apache Spark) Tj
+0 -12 Td
+(Web Development: HTML, CSS, JavaScript) Tj
+
+0 -25 Td
+/F2 14 Tf
+(PROJECTS) Tj
+0 -15 Td
+/F2 11 Tf
+(NLP Web-based Data Application) Tj
+0 -12 Td
+/F1 9 Tf
+(• Designed a job search website with machine learning models for job category classification) Tj
+0 -10 Td
+(  and recommendation using Flask and Python.) Tj
+0 -10 Td
+(• Tokenized job descriptions and generated feature representations using NLTK and pandas.) Tj
+0 -10 Td
+(• Built and evaluated classification models with scikit-learn, improving accuracy by 20%.) Tj
+0 -10 Td
+(• Generated ML model to recommend job categories, enhancing user experience by 40%.) Tj
+
+0 -20 Td
+/F2 11 Tf
+(Machine Learning for Health Diagnostics and Risk Factors Analysis) Tj
+0 -12 Td
+/F1 9 Tf
+(• Innovated machine learning models to classify health diagnostics using Python and scikit-learn.) Tj
+0 -10 Td
+(• Visualized large heart dataset and analyzed fertility trends, specifying line of best fit.) Tj
+0 -10 Td
+(• Built classification models for breast mass diagnosis, improving accuracy by 18%.) Tj
+0 -10 Td
+(• Enhanced linear regression models with regularization techniques for better prediction.) Tj
+
+0 -20 Td
+/F2 11 Tf
+(HDFS Streaming Monitor Spark) Tj
+0 -12 Td
+/F1 9 Tf
+(• Developed real-time log monitoring system using Apache Spark Streaming and Scala.) Tj
+0 -10 Td
+(• Implemented updateStateByKey to maintain cumulative word frequency and patterns.) Tj
+0 -10 Td
+(• Reduced log processing latency by ~92% compared to traditional batch processing.) Tj
+0 -10 Td
+(• Built fault-tolerant architecture using checkpointing with 15-second recovery time.) Tj
+0 -10 Td
+(• Scaled system to process over 1.2 million log lines per hour.) Tj
+
+0 -20 Td
+/F2 11 Tf
+(Movie Recommender System) Tj
+0 -12 Td
+/F1 9 Tf
+(• Implemented movie recommendation system using collaborative filtering with Python.) Tj
+0 -10 Td
+(• Executed user-based collaborative filtering using KNN, improving accuracy by 15%.) Tj
+0 -10 Td
+(• Enacted item-based filtering models, increasing user satisfaction by 10%.) Tj
+0 -10 Td
+(• Proposed new recommendation algorithm showing significant performance improvements.) Tj
+
+0 -20 Td
+/F2 11 Tf
+(Australian Energy Consumption Dashboard) Tj
+0 -12 Td
+/F1 9 Tf
+(• Developed interactive web-based dashboard using R and Shiny for energy trends 2008-2021.) Tj
+0 -10 Td
+(• Performed extensive data preprocessing from multiple sources for accurate visualizations.) Tj
+0 -10 Td
+(• Created animated plots using ggplot2 and plotly, increasing engagement by 30%.) Tj
+0 -10 Td
+(• Applied dynamic filtering options, receiving 95% positive feedback from beta testers.) Tj
+
+0 -25 Td
+/F2 14 Tf
+(CERTIFICATIONS) Tj
+0 -15 Td
+/F1 10 Tf
+(• Data Analysis and Visualization with Power BI | Coursera (Microsoft)) Tj
+0 -12 Td
+(• AWS Cloud Technical Essentials | AWS) Tj
+0 -12 Td
+(• AWS Sustainable Impact Program | AWS) Tj
+0 -12 Td
+(• AWS Academy Graduate - AWS Academy Cloud Foundations | AWS) Tj
+0 -12 Td
+(• Deloitte Australia Technology Job Simulation | Forage) Tj
+
+0 -25 Td
+/F2 14 Tf
+(VOLUNTEER) Tj
+0 -15 Td
+/F2 11 Tf
+(Peer Mentor | RMIT University, Melbourne) Tj
+0 -12 Td
+/F1 10 Tf
+(• Foundation of AI for STEM) Tj
+0 -12 Td
+(• Practical Data Science) Tj
+0 -12 Td
+(Assisted students in understanding course material and provided academic support.) Tj
+
+ET
+endstream
+endobj
+
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+
+6 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica-Bold
+>>
+endobj
+
+xref
+0 7
+0000000000 65535 f 
+0000000010 00000 n 
+0000000053 00000 n 
+0000000110 00000 n 
+0000000251 00000 n 
+0000003803 00000 n 
+0000003870 00000 n 
+trailer
+<<
+/Size 7
+/Root 1 0 R
+>>
+startxref
+3942
+%%EOF

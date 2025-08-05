@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Github, Linkedin, Download, Mail } from 'lucide-react';
-import swayamProfile from '@/assets/swayam-professional.jpg';
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -94,19 +93,23 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Column - Profile Image */}
+          {/* Resume Download Section */}
           <div className="flex justify-center lg:justify-end animate-fade-scale">
-            <div className="relative glow-effect">
-              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/20 floating-animation">
-                <img 
-                  src={swayamProfile} 
-                  alt="Swayam Patel - Data Scientist" 
-                  className="w-full h-full object-cover"
-                />
+            <div className="flex flex-col items-center space-y-6 p-8 rounded-xl bg-card/50 border border-primary/20">
+              <div className="w-24 h-24 rounded-full bg-gradient-primary flex items-center justify-center">
+                <Download className="w-10 h-10 text-white" />
               </div>
-              {/* Decorative Elements */}
-              <div className="absolute -top-4 -right-4 w-20 h-20 border border-primary/30 rounded-full"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-secondary/20 rounded-full blur-sm"></div>
+              <div className="text-center space-y-2">
+                <h3 className="text-xl font-semibold text-foreground">Download Resume</h3>
+                <p className="text-muted-foreground">Get my complete professional profile</p>
+              </div>
+              <a 
+                href="/Swayam_Patel_Resume.pdf" 
+                download="Swayam_Patel_Resume.pdf"
+                className="btn-primary px-6 py-3 rounded-lg font-medium hover:transform hover:scale-105 transition-all duration-200"
+              >
+                Download PDF
+              </a>
             </div>
           </div>
         </div>

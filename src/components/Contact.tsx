@@ -1,17 +1,19 @@
+
 import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
 import { 
   Mail, 
   Linkedin, 
   Github, 
   MapPin, 
   Send,
-  Download,
-  Calendar
+  Calendar,
+  Loader2
 } from 'lucide-react';
 
 const Contact = () => {
@@ -21,6 +23,7 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -30,14 +33,43 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsLoading(true);
+
+    try {
+      // Initialize EmailJS with your public key
+      emailjs.init('F6CH3EkXd-RdQxN2u');
+
+      // Send email using your service ID and template ID
+      await emailjs.send(
+        'service_2qj16xk',
+        'template_tvlww49',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_name: 'Swayam Patel'
+        }
+      );
+
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon!",
+      });
+      
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      console.error('Email send failed:', error);
+      toast({
+        title: "Failed to Send Message",
+        description: "Please try again or contact me directly via email.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const contactInfo = [
@@ -66,7 +98,7 @@ const Contact = () => {
       name: "LinkedIn",
       icon: <Linkedin className="w-5 h-5" />,
       url: "https://www.linkedin.com/in/swayammpatel",
-      color: "hover:text-blue-500"
+      color: "hover:text-primary"
     },
     {
       name: "GitHub",
@@ -82,12 +114,12 @@ const Contact = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Let's <span className="text-gradient-primary">Connect</span>
+            Let's <span className="text-gradient-primary neon-glow">Connect</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Ready to discuss data science opportunities, collaborations, or just have a chat about technology
           </p>
-          <div className="w-24 h-1 bg-gradient-primary rounded-full mx-auto mt-6"></div>
+          <div className="w-24 h-1 bg-gradient-primary rounded-full mx-auto mt-6 shadow-primary"></div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -107,7 +139,7 @@ const Contact = () => {
               {contactInfo.map((info, index) => (
                 <Card key={index} className="card-glow p-4">
                   <div className="flex items-center space-x-4">
-                    <div className="bg-primary/10 p-3 rounded-lg">
+                    <div className="bg-primary/10 p-3 rounded-lg border border-primary/20">
                       {info.icon}
                     </div>
                     <div>
@@ -115,7 +147,7 @@ const Contact = () => {
                       {info.action ? (
                         <a 
                           href={info.action}
-                          className="text-primary hover:text-primary/80 transition-colors"
+                          className="text-primary hover:text-primary/80 transition-colors neon-glow"
                         >
                           {info.value}
                         </a>
@@ -148,22 +180,6 @@ const Contact = () => {
                 ))}
               </div>
             </div>
-
-            {/* Resume Download */}
-            <Card className="card-glow p-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <h4 className="font-semibold mb-2">Download Resume</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Get a detailed overview of my experience and skills
-                  </p>
-                </div>
-                <Button className="btn-primary">
-                  <Download className="w-4 h-4 mr-2" />
-                  Resume
-                </Button>
-              </div>
-            </Card>
           </div>
 
           {/* Contact Form */}
@@ -181,7 +197,8 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="bg-background border-border"
+                    disabled={isLoading}
+                    className="bg-background border-border focus:border-primary focus:ring-primary/20"
                     placeholder="Your full name"
                   />
                 </div>
@@ -196,7 +213,8 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="bg-background border-border"
+                    disabled={isLoading}
+                    className="bg-background border-border focus:border-primary focus:ring-primary/20"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -212,7 +230,8 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleInputChange}
                   required
-                  className="bg-background border-border"
+                  disabled={isLoading}
+                  className="bg-background border-border focus:border-primary focus:ring-primary/20"
                   placeholder="What's this about?"
                 />
               </div>
@@ -227,15 +246,29 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   required
+                  disabled={isLoading}
                   rows={6}
-                  className="bg-background border-border resize-none"
+                  className="bg-background border-border resize-none focus:border-primary focus:ring-primary/20"
                   placeholder="Tell me about the opportunity or collaboration you have in mind..."
                 />
               </div>
 
-              <Button type="submit" className="btn-primary w-full">
-                <Send className="w-4 h-4 mr-2" />
-                Send Message
+              <Button 
+                type="submit" 
+                className="btn-primary w-full" 
+                disabled={isLoading}
+              >
+                {isLoading ? (
+                  <>
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-4 h-4 mr-2" />
+                    Send Message
+                  </>
+                )}
               </Button>
             </form>
           </Card>

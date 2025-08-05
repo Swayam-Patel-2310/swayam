@@ -1,5 +1,6 @@
+
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Github, Linkedin, Download, Mail } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -19,98 +20,69 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-6 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Text Content */}
-          <div className="space-y-8 animate-slide-up">
-            <div className="space-y-4">
-              <p className="text-primary font-mono text-lg">Hello, I'm</p>
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                <span className="text-gradient-primary">Swayam</span>
-                <br />
-                <span className="text-foreground">Patel</span>
-              </h1>
-              <div className="text-xl lg:text-2xl text-muted-foreground font-light">
-                <span>A data scientist who builds </span>
-                <span className="text-gradient-primary font-semibold">smart solutions</span>
-                <span> from messy data</span>
-              </div>
-            </div>
-
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
-              Final-year Data Science student at RMIT University with expertise in machine learning, 
-              data visualization, and software development. Passionate about transforming complex data 
-              into actionable insights.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
-              <Button 
-                className="btn-primary text-lg px-8 py-3"
-                onClick={() => scrollToSection('projects')}
-              >
-                View My Work
-              </Button>
-              <Button 
-                variant="outline" 
-                className="btn-outline text-lg px-8 py-3"
-                onClick={() => scrollToSection('contact')}
-              >
-                <Mail className="w-5 h-5 mr-2" />
-                Get In Touch
-              </Button>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex items-center space-x-6 pt-4">
-              <a 
-                href="https://github.com/Swayam-Patel-2310" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors duration-200"
-              >
-                <Github className="w-6 h-6" />
-              </a>
-              <a 
-                href="https://www.linkedin.com/in/swayammpatel" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors duration-200"
-              >
-                <Linkedin className="w-6 h-6" />
-              </a>
-              <Button 
-                variant="ghost" 
-                className="text-muted-foreground hover:text-primary p-0"
-              >
-                <Download className="w-6 h-6" />
-              </Button>
-            </div>
-
-            {/* Status Badge */}
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-secondary/20 border border-secondary/30">
-              <div className="w-2 h-2 bg-secondary rounded-full mr-3 pulse-glow"></div>
-              <span className="text-secondary font-medium">Available for opportunities</span>
+        <div className="max-w-4xl mx-auto text-center space-y-8 animate-slide-up">
+          <div className="space-y-6">
+            <p className="text-primary font-mono text-lg neon-glow">Hello, I'm</p>
+            <h1 className="text-6xl lg:text-8xl font-bold leading-tight">
+              <span className="text-gradient-primary neon-glow">Swayam</span>
+              <br />
+              <span className="text-foreground">Patel</span>
+            </h1>
+            <div className="text-2xl lg:text-3xl text-muted-foreground font-light">
+              <span>A data scientist who builds </span>
+              <span className="text-gradient-primary font-semibold neon-glow">smart solutions</span>
+              <span> from messy data</span>
             </div>
           </div>
 
-          {/* Resume Download Section */}
-          <div className="flex justify-center lg:justify-end animate-fade-scale">
-            <div className="flex flex-col items-center space-y-6 p-8 rounded-xl bg-card/50 border border-primary/20">
-              <div className="w-24 h-24 rounded-full bg-gradient-primary flex items-center justify-center">
-                <Download className="w-10 h-10 text-white" />
-              </div>
-              <div className="text-center space-y-2">
-                <h3 className="text-xl font-semibold text-foreground">Download Resume</h3>
-                <p className="text-muted-foreground">Get my complete professional profile</p>
-              </div>
-              <a 
-                href="/Swayam_Patel_Resume.pdf" 
-                download="Swayam_Patel_Resume.pdf"
-                className="btn-primary px-6 py-3 rounded-lg font-medium hover:transform hover:scale-105 transition-all duration-200"
-              >
-                Download PDF
-              </a>
-            </div>
+          <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            Final-year Data Science student at RMIT University with expertise in machine learning, 
+            data visualization, and software development. Passionate about transforming complex data 
+            into actionable insights.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap justify-center gap-6">
+            <Button 
+              className="btn-primary text-lg px-8 py-4"
+              onClick={() => scrollToSection('projects')}
+            >
+              View My Work
+            </Button>
+            <Button 
+              variant="outline" 
+              className="btn-outline text-lg px-8 py-4"
+              onClick={() => scrollToSection('contact')}
+            >
+              <Mail className="w-5 h-5 mr-2" />
+              Get In Touch
+            </Button>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex items-center justify-center space-x-8 pt-6">
+            <a 
+              href="https://github.com/Swayam-Patel-2310" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors duration-200 p-2 rounded-full hover:bg-primary/10"
+            >
+              <Github className="w-8 h-8" />
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/swayammpatel" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors duration-200 p-2 rounded-full hover:bg-primary/10"
+            >
+              <Linkedin className="w-8 h-8" />
+            </a>
+          </div>
+
+          {/* Status Badge */}
+          <div className="inline-flex items-center px-6 py-3 rounded-full bg-secondary/20 border border-secondary/30 animate-neon-flicker">
+            <div className="w-3 h-3 bg-secondary rounded-full mr-3 pulse-glow"></div>
+            <span className="text-secondary font-medium text-lg">Available for opportunities</span>
           </div>
         </div>
 

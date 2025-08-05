@@ -1,6 +1,7 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Download, Github, Linkedin } from 'lucide-react';
+import { Menu, X, Github, Linkedin } from 'lucide-react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,7 +35,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="text-2xl font-bold">
-            <span className="text-gradient-primary">Swayam</span>
+            <span className="text-gradient-primary neon-glow">Swayam</span>
             <span className="text-foreground">.dev</span>
           </div>
 
@@ -44,7 +45,7 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium hover:neon-glow"
               >
                 {item.label}
               </a>
@@ -72,10 +73,6 @@ const Header = () => {
               <a href="https://www.linkedin.com/in/swayammpatel" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5" />
               </a>
-            </Button>
-            <Button className="btn-primary">
-              <Download className="w-4 h-4 mr-2" />
-              Resume
             </Button>
           </div>
 
@@ -128,10 +125,6 @@ const Header = () => {
                   <a href="https://www.linkedin.com/in/swayammpatel" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="w-5 h-5" />
                   </a>
-                </Button>
-                <Button className="btn-primary">
-                  <Download className="w-4 h-4 mr-2" />
-                  Resume
                 </Button>
               </div>
             </div>

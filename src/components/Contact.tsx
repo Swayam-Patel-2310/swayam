@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -41,16 +40,23 @@ const Contact = () => {
       // Initialize EmailJS with your public key
       emailjs.init('F6CH3EkXd-RdQxN2u');
 
-      // Send email using your service ID and template ID
+      // Send email using your service ID and template ID with corrected mapping
       await emailjs.send(
         'service_2qj16xk',
         'template_tvlww49',
         {
+          // Map form fields to template variables correctly
           from_name: formData.name,
           from_email: formData.email,
           subject: formData.subject,
           message: formData.message,
-          to_name: 'Swayam Patel'
+          to_name: 'Swayam Patel',
+          // Additional template variables for better email formatting
+          reply_to: formData.email,
+          user_name: formData.name,
+          user_email: formData.email,
+          user_subject: formData.subject,
+          user_message: formData.message
         }
       );
 

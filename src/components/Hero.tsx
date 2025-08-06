@@ -1,6 +1,6 @@
-
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Github, Linkedin, Mail, Play, Star, CheckCircle, ArrowRight } from 'lucide-react';
+import DataScienceIcon from './DataScienceIcon';
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -22,21 +22,22 @@ const Hero = () => {
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-slide-up">
           <div className="space-y-8">
-            {/* Abstract Data Science Icon */}
+            {/* Custom Data Science Icon */}
             <div className="flex justify-center mb-8">
-              <img 
-                src="/lovable-uploads/1959b05f-7352-4b71-86db-db52829b0fb7.png" 
-                alt="Data Science"
-                className="w-32 h-32 object-contain"
-              />
+              <DataScienceIcon />
             </div>
             
-            {/* Netflix-Style Name */}
-            <h1 className="text-6xl lg:text-8xl font-bold leading-tight">
-              <span className="text-primary font-black tracking-wide uppercase" style={{ fontFamily: 'Arial, sans-serif' }}>
-                SWAYAM PATEL
-              </span>
-            </h1>
+            {/* Netflix-Style Curved Name */}
+            <div className="space-y-4">
+              <div className="netflix-name-container">
+                <div className="text-7xl lg:text-9xl font-netflix font-black tracking-wider uppercase text-primary netflix-curve-effect">
+                  SWAYAM
+                </div>
+                <div className="text-7xl lg:text-9xl font-netflix font-black tracking-wider uppercase text-primary netflix-curve-effect mt-2">
+                  PATEL
+                </div>
+              </div>
+            </div>
             
             <div className="text-2xl lg:text-3xl text-muted-foreground font-light">
               <span>A data scientist who builds </span>
@@ -55,7 +56,6 @@ const Hero = () => {
             into actionable insights.
           </p>
 
-          {/* Netflix-Style CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-6">
             <Button 
               className="netflix-button text-lg px-8 py-4 flex items-center gap-3"
@@ -76,7 +76,6 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Social Links with Enhanced Icons */}
           <div className="flex items-center justify-center space-x-8 pt-6">
             <a 
               href="https://github.com/Swayam-Patel-2310" 
@@ -96,7 +95,6 @@ const Hero = () => {
             </a>
           </div>
 
-          {/* Enhanced Status Badge */}
           <div className="inline-flex items-center px-6 py-3 rounded-full bg-secondary/20 border border-secondary/30 animate-neon-flicker netflix-card">
             <div className="w-3 h-3 bg-secondary rounded-full mr-3 pulse-glow"></div>
             <CheckCircle className="w-5 h-5 text-secondary mr-2" />
@@ -105,7 +103,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Enhanced Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <Button 
             variant="ghost" 

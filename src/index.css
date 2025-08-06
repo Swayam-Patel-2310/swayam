@@ -8,34 +8,30 @@
 
 @layer base {
   :root {
-    /* Netflix Dark Theme Colors */
-    --background: 0 0% 8%;           /* Deep black/dark grey #141414 */
-    --foreground: 0 0% 98%;          /* White text */
+    /* ... keep existing code (Netflix Dark Theme Colors, gradients, shadows) the same */
+    --background: 0 0% 8%;           
+    --foreground: 0 0% 98%;          
     
-    --card: 0 0% 12%;                /* Slightly lighter than background */
+    --card: 0 0% 12%;                
     --card-foreground: 0 0% 98%;
     
     --popover: 0 0% 12%;
     --popover-foreground: 0 0% 98%;
     
-    /* Netflix Red Primary */
-    --primary: 0 86% 44%;            /* Netflix Red #E50914 */
+    --primary: 0 86% 44%;            
     --primary-foreground: 0 0% 98%;
     --primary-glow: 0 86% 54%;
     
-    /* Secondary Blue (for subtle accents) */
     --secondary: 210 100% 56%;
     --secondary-foreground: 0 0% 98%;
     --secondary-glow: 210 100% 66%;
     
-    --accent: 0 0% 20%;              /* Dark grey for subtle elements */
+    --accent: 0 0% 20%;              
     --accent-foreground: 0 0% 90%;
     
-    /* Neutral Tones */
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 65%;
     
-    /* System Colors */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     
@@ -45,7 +41,6 @@
     
     --radius: 0.5rem;
     
-    /* Sidebar */
     --sidebar-background: 0 0% 8%;
     --sidebar-foreground: 0 0% 98%;
     --sidebar-primary: 0 86% 44%;
@@ -55,7 +50,6 @@
     --sidebar-border: 0 0% 20%;
     --sidebar-ring: 0 86% 44%;
     
-    /* Netflix Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(0 86% 44%), hsl(0 86% 54%), hsl(10 86% 49%));
     --gradient-secondary: linear-gradient(45deg, hsl(210 100% 56%), hsl(220 100% 60%));
     --gradient-accent: linear-gradient(90deg, hsl(0 0% 20%), hsl(0 0% 25%));
@@ -64,7 +58,6 @@
     --gradient-glow: radial-gradient(ellipse at center, hsl(0 86% 44% / 0.3), hsl(210 100% 56% / 0.2), transparent 70%);
     --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 86% 8%), hsl(210 100% 8%));
     
-    /* Netflix Shadows & Effects */
     --shadow-glow: 0 0 40px hsl(0 86% 44% / 0.5), 0 0 80px hsl(210 100% 56% / 0.3);
     --shadow-card: 0 20px 40px -10px hsl(0 0% 8% / 0.9), 0 0 25px hsl(0 86% 44% / 0.2);
     --shadow-elevated: 0 30px 60px -10px hsl(0 0% 8% / 0.95), 0 0 50px hsl(0 86% 44% / 0.4);
@@ -73,7 +66,6 @@
     --shadow-accent: 0 0 30px hsl(0 0% 20% / 0.5);
   }
   
-  /* Animations */
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -92,6 +84,32 @@
 
 /* Netflix-Style Components & Utilities */
 @layer components {
+  /* Netflix Name Styling with Curve Effect */
+  .netflix-name-container {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .netflix-curve-effect {
+    position: relative;
+    display: inline-block;
+    text-shadow: 0 0 20px hsl(0 86% 44% / 0.8);
+    transform: perspective(300px) rotateX(5deg);
+    letter-spacing: 0.1em;
+  }
+
+  .netflix-curve-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent 0%, hsl(0 86% 44% / 0.1) 15%, hsl(0 86% 44% / 0.1) 85%, transparent 100%);
+    border-radius: 8px;
+    z-index: -1;
+  }
+
+  /* ... keep existing code (hero-gradient, card-glow, glow-effect, text-gradient-primary, btn styles, animations) the same */
   .hero-gradient {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
@@ -220,9 +238,17 @@
   .font-mono {
     font-family: 'JetBrains Mono', 'Courier New', monospace;
   }
+
+  .font-netflix {
+    font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+  }
+
+  .font-netflix-alt {
+    font-family: 'Oswald', 'Arial Black', sans-serif;
+  }
 }
 
-/* Enhanced Animations */
+/* ... keep existing code (Enhanced Animations keyframes and classes) the same */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }

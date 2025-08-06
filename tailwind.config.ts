@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -23,6 +22,9 @@ export default {
 				inter: ['Inter', 'system-ui', 'sans-serif'],
 				roboto: ['Roboto', 'system-ui', 'sans-serif'],
 				mono: ['JetBrains Mono', 'Courier New', 'monospace'],
+				// Netflix-style fonts
+				'netflix': ['Bebas Neue', 'Arial Black', 'sans-serif'],
+				'netflix-alt': ['Oswald', 'Arial Black', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

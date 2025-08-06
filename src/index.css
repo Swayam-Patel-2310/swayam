@@ -3,138 +3,74 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Netflix-Inspired Design System - Red, Black, Blue */
+/* Netflix-Style Design System - Red, Black, Dark Grey */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap');
 
 @layer base {
   :root {
-    /* Light Theme Colors */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    /* Netflix Dark Theme Colors */
+    --background: 0 0% 8%;           /* Deep black/dark grey #141414 */
+    --foreground: 0 0% 98%;          /* White text */
     
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card: 0 0% 12%;                /* Slightly lighter than background */
+    --card-foreground: 0 0% 98%;
     
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 98%;
     
-    /* Netflix-Inspired Theme - Light */
-    --primary: 0 87% 53%;           /* Netflix Red */
+    /* Netflix Red Primary */
+    --primary: 0 86% 44%;            /* Netflix Red #E50914 */
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 0 87% 63%;
+    --primary-glow: 0 86% 54%;
     
-    --secondary: 210 100% 56%;      /* Netflix Blue */
+    /* Secondary Blue (for subtle accents) */
+    --secondary: 210 100% 56%;
     --secondary-foreground: 0 0% 98%;
     --secondary-glow: 210 100% 66%;
     
-    --accent: 0 0% 14%;             /* Dark Accent */
-    --accent-foreground: 0 0% 98%;
+    --accent: 0 0% 20%;              /* Dark grey for subtle elements */
+    --accent-foreground: 0 0% 90%;
     
-    /* Neutral Tones - Light */
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
+    /* Neutral Tones */
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
     
     /* System Colors */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 87% 53%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 86% 44%;
     
     --radius: 0.5rem;
     
     /* Sidebar */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 3.9%;
-    --sidebar-primary: 0 87% 53%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 0 0% 96.1%;
-    --sidebar-accent-foreground: 0 0% 45.1%;
-    --sidebar-border: 0 0% 89.8%;
-    --sidebar-ring: 0 87% 53%;
-  }
-
-  .dark {
-    /* Dark Theme Colors */
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    
-    /* Netflix-Inspired Theme - Dark */
-    --primary: 0 87% 53%;           /* Netflix Red */
-    --primary-foreground: 0 0% 98%;
-    --primary-glow: 0 87% 63%;
-    
-    --secondary: 210 100% 56%;      /* Netflix Blue */
-    --secondary-foreground: 0 0% 98%;
-    --secondary-glow: 210 100% 66%;
-    
-    --accent: 0 0% 14.9%;           /* Dark Gray */
-    --accent-foreground: 0 0% 98%;
-    
-    /* Neutral Tones - Dark */
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    
-    /* System Colors */
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 87% 53%;
-    
-    /* Sidebar */
-    --sidebar-background: 0 0% 3.9%;
+    --sidebar-background: 0 0% 8%;
     --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 0 87% 53%;
+    --sidebar-primary: 0 86% 44%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 0 0% 14.9%;
+    --sidebar-accent: 0 0% 15%;
     --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 0 0% 14.9%;
-    --sidebar-ring: 0 87% 53%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 0 86% 44%;
     
     /* Netflix Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(0 87% 53%), hsl(0 87% 63%), hsl(10 87% 58%));
+    --gradient-primary: linear-gradient(135deg, hsl(0 86% 44%), hsl(0 86% 54%), hsl(10 86% 49%));
     --gradient-secondary: linear-gradient(45deg, hsl(210 100% 56%), hsl(220 100% 60%));
-    --gradient-accent: linear-gradient(90deg, hsl(0 0% 14%), hsl(0 0% 20%));
-    --gradient-dark: linear-gradient(135deg, hsl(0 0% 3.9%), hsl(0 0% 7%), hsl(0 0% 5%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 7% / 0.9), hsl(0 0% 10% / 0.7));
-    --gradient-glow: radial-gradient(ellipse at center, hsl(0 87% 53% / 0.3), hsl(210 100% 56% / 0.2), transparent 70%);
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 3.9%), hsl(0 87% 8%), hsl(210 100% 8%));
+    --gradient-accent: linear-gradient(90deg, hsl(0 0% 20%), hsl(0 0% 25%));
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 12%), hsl(0 0% 10%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 12% / 0.9), hsl(0 0% 15% / 0.7));
+    --gradient-glow: radial-gradient(ellipse at center, hsl(0 86% 44% / 0.3), hsl(210 100% 56% / 0.2), transparent 70%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 86% 8%), hsl(210 100% 8%));
     
     /* Netflix Shadows & Effects */
-    --shadow-glow: 0 0 40px hsl(0 87% 53% / 0.5), 0 0 80px hsl(210 100% 56% / 0.3);
-    --shadow-card: 0 20px 40px -10px hsl(0 0% 3.9% / 0.9), 0 0 25px hsl(0 87% 53% / 0.2);
-    --shadow-elevated: 0 30px 60px -10px hsl(0 0% 3.9% / 0.95), 0 0 50px hsl(0 87% 53% / 0.4);
-    --shadow-primary: 0 0 30px hsl(0 87% 53% / 0.6);
+    --shadow-glow: 0 0 40px hsl(0 86% 44% / 0.5), 0 0 80px hsl(210 100% 56% / 0.3);
+    --shadow-card: 0 20px 40px -10px hsl(0 0% 8% / 0.9), 0 0 25px hsl(0 86% 44% / 0.2);
+    --shadow-elevated: 0 30px 60px -10px hsl(0 0% 8% / 0.95), 0 0 50px hsl(0 86% 44% / 0.4);
+    --shadow-primary: 0 0 30px hsl(0 86% 44% / 0.6);
     --shadow-secondary: 0 0 30px hsl(210 100% 56% / 0.6);
-    --shadow-accent: 0 0 30px hsl(0 0% 14% / 0.5);
-  }
-  
-  /* Light theme gradients */
-  :root {
-    --gradient-primary: linear-gradient(135deg, hsl(0 87% 53%), hsl(0 87% 63%), hsl(10 87% 58%));
-    --gradient-secondary: linear-gradient(45deg, hsl(210 100% 56%), hsl(220 100% 60%));
-    --gradient-accent: linear-gradient(90deg, hsl(0 0% 89%), hsl(0 0% 94%));
-    --gradient-dark: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 96%), hsl(0 0% 98%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.9), hsl(0 0% 96% / 0.7));
-    --gradient-glow: radial-gradient(ellipse at center, hsl(0 87% 53% / 0.1), hsl(210 100% 56% / 0.1), transparent 70%);
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 87% 97%), hsl(210 100% 97%));
-    
-    /* Light theme shadows */
-    --shadow-glow: 0 0 40px hsl(0 87% 53% / 0.2), 0 0 80px hsl(210 100% 56% / 0.1);
-    --shadow-card: 0 20px 40px -10px hsl(0 0% 3.9% / 0.1), 0 0 25px hsl(0 87% 53% / 0.1);
-    --shadow-elevated: 0 30px 60px -10px hsl(0 0% 3.9% / 0.15), 0 0 50px hsl(0 87% 53% / 0.2);
-    --shadow-primary: 0 0 30px hsl(0 87% 53% / 0.3);
-    --shadow-secondary: 0 0 30px hsl(210 100% 56% / 0.3);
-    --shadow-accent: 0 0 30px hsl(0 0% 14% / 0.2);
+    --shadow-accent: 0 0 30px hsl(0 0% 20% / 0.5);
   }
   
   /* Animations */
@@ -154,7 +90,7 @@
   }
 }
 
-/* Portfolio Components & Utilities */
+/* Netflix-Style Components & Utilities */
 @layer components {
   .hero-gradient {
     background: var(--gradient-primary);
@@ -245,6 +181,30 @@
 
   .neon-glow {
     text-shadow: 0 0 10px hsl(var(--primary) / 0.8);
+  }
+
+  .netflix-button {
+    @apply bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-md;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 8px hsl(0 0% 0% / 0.3);
+  }
+
+  .netflix-button:hover {
+    @apply bg-primary/90;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px hsl(0 0% 0% / 0.4);
+  }
+
+  .netflix-card {
+    @apply bg-card border border-border rounded-lg p-6;
+    background: hsl(var(--card));
+    box-shadow: 0 8px 24px hsl(0 0% 0% / 0.4);
+    transition: var(--transition-smooth);
+  }
+
+  .netflix-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px hsl(0 0% 0% / 0.6);
   }
 }
 

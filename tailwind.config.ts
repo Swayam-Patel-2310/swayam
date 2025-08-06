@@ -87,6 +87,8 @@ export default {
 				'primary': 'var(--shadow-primary)',
 				'secondary': 'var(--shadow-secondary)',
 				'accent': 'var(--shadow-accent)',
+				'netflix': '0 8px 24px hsl(0 0% 0% / 0.4)',
+				'netflix-hover': '0 12px 32px hsl(0 0% 0% / 0.6)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

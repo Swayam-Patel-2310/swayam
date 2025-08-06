@@ -1,8 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Github, Linkedin } from 'lucide-react';
-import { ThemeToggle } from '@/components/ThemeToggle';
+import { Menu, X, Github, Linkedin, Star, Play } from 'lucide-react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,18 +16,18 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Home', href: '#home', icon: Play },
+    { label: 'About', href: '#about', icon: Star },
+    { label: 'Projects', href: '#projects', icon: Play },
+    { label: 'Skills', href: '#skills', icon: Star },
+    { label: 'Contact', href: '#contact', icon: Play },
   ];
 
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-background/80 backdrop-blur-lg border-b border-border'
+          ? 'bg-background/95 backdrop-blur-lg border-b border-border'
           : 'bg-transparent'
       }`}
     >
@@ -46,8 +45,9 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium hover:neon-glow"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium hover:neon-glow flex items-center gap-2"
               >
+                <item.icon className="w-4 h-4" />
                 {item.label}
               </a>
             ))}
@@ -55,7 +55,6 @@ const Header = () => {
 
           {/* Action Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <ThemeToggle />
             <Button
               variant="ghost"
               size="sm"
@@ -101,14 +100,14 @@ const Header = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
+                  className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium flex items-center gap-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
+                  <item.icon className="w-4 h-4" />
                   {item.label}
                 </a>
               ))}
               <div className="flex items-center space-x-4 pt-4">
-                <ThemeToggle />
                 <Button
                   variant="ghost"
                   size="sm"

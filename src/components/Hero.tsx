@@ -21,17 +21,23 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-slide-up">
-          <div className="space-y-6">
-            <div className="flex items-center justify-center gap-2 text-primary font-mono text-lg neon-glow">
-              <Star className="w-5 h-5" />
-              Hello, I'm
-              <Star className="w-5 h-5" />
+          <div className="space-y-8">
+            {/* Abstract Data Science Icon */}
+            <div className="flex justify-center mb-8">
+              <img 
+                src="/lovable-uploads/1959b05f-7352-4b71-86db-db52829b0fb7.png" 
+                alt="Data Science"
+                className="w-32 h-32 object-contain"
+              />
             </div>
+            
+            {/* Netflix-Style Name */}
             <h1 className="text-6xl lg:text-8xl font-bold leading-tight">
-              <span className="text-gradient-primary neon-glow">Swayam</span>
-              <br />
-              <span className="text-foreground">Patel</span>
+              <span className="text-primary font-black tracking-wide uppercase" style={{ fontFamily: 'Arial, sans-serif' }}>
+                SWAYAM PATEL
+              </span>
             </h1>
+            
             <div className="text-2xl lg:text-3xl text-muted-foreground font-light">
               <span>A data scientist who builds </span>
               <span className="text-gradient-primary font-semibold neon-glow flex items-center justify-center gap-2">

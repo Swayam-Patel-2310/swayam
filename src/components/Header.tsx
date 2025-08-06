@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Github, Linkedin } from 'lucide-react';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -54,6 +55,7 @@ const Header = () => {
 
           {/* Action Buttons */}
           <div className="hidden md:flex items-center space-x-4">
+            <ThemeToggle />
             <Button
               variant="ghost"
               size="sm"
@@ -106,6 +108,7 @@ const Header = () => {
                 </a>
               ))}
               <div className="flex items-center space-x-4 pt-4">
+                <ThemeToggle />
                 <Button
                   variant="ghost"
                   size="sm"

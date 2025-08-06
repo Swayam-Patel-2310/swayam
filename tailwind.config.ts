@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -20,6 +21,7 @@ export default {
 		extend: {
 			fontFamily: {
 				inter: ['Inter', 'system-ui', 'sans-serif'],
+				roboto: ['Roboto', 'system-ui', 'sans-serif'],
 				mono: ['JetBrains Mono', 'Courier New', 'monospace'],
 			},
 			colors: {

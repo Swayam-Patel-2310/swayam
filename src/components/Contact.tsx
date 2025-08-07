@@ -40,23 +40,25 @@ const Contact = () => {
       // Initialize EmailJS with your public key
       emailjs.init('F6CH3EkXd-RdQxN2u');
 
-      // Send email using your service ID and template ID with corrected mapping
+      // Send email with corrected template variables that match EmailJS template
       await emailjs.send(
         'service_2qj16xk',
         'template_tvlww49',
         {
-          // Map form fields to template variables correctly
+          // Use the exact variable names that your EmailJS template expects
+          to_name: 'Swayam Patel',
           from_name: formData.name,
           from_email: formData.email,
+          reply_to: formData.email,
           subject: formData.subject,
           message: formData.message,
-          to_name: 'Swayam Patel',
-          // Additional template variables for better email formatting
-          reply_to: formData.email,
+          // Additional common template variables
           user_name: formData.name,
           user_email: formData.email,
           user_subject: formData.subject,
-          user_message: formData.message
+          user_message: formData.message,
+          sender_name: formData.name,
+          sender_email: formData.email
         }
       );
 

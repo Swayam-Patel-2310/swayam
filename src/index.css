@@ -3,12 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Netflix-Style Design System - Red, Black, Dark Grey */
+/* Clean Design System - Muted Red, Black, Dark Grey */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap');
 
 @layer base {
   :root {
-    /* ... keep existing code (Netflix Dark Theme Colors, gradients, shadows) the same */
+    /* Muted Red and Dark Theme Colors */
     --background: 0 0% 8%;           
     --foreground: 0 0% 98%;          
     
@@ -18,9 +18,9 @@
     --popover: 0 0% 12%;
     --popover-foreground: 0 0% 98%;
     
-    --primary: 0 86% 44%;            
+    --primary: 0 50% 35%;            /* Muted red instead of bright */
     --primary-foreground: 0 0% 98%;
-    --primary-glow: 0 86% 54%;
+    --primary-glow: 0 50% 45%;
     
     --secondary: 210 100% 56%;
     --secondary-foreground: 0 0% 98%;
@@ -37,31 +37,32 @@
     
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 0 86% 44%;
+    --ring: 0 50% 35%;
     
     --radius: 0.5rem;
     
     --sidebar-background: 0 0% 8%;
     --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 0 86% 44%;
+    --sidebar-primary: 0 50% 35%;
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 0 0% 15%;
     --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 0 86% 44%;
+    --sidebar-ring: 0 50% 35%;
     
-    --gradient-primary: linear-gradient(135deg, hsl(0 86% 44%), hsl(0 86% 54%), hsl(10 86% 49%));
+    /* Improved gradients with muted red and black */
+    --gradient-primary: linear-gradient(135deg, hsl(0 50% 25%), hsl(0 45% 30%), hsl(10 40% 28%));
     --gradient-secondary: linear-gradient(45deg, hsl(210 100% 56%), hsl(220 100% 60%));
     --gradient-accent: linear-gradient(90deg, hsl(0 0% 20%), hsl(0 0% 25%));
-    --gradient-dark: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 12%), hsl(0 0% 10%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 12% / 0.9), hsl(0 0% 15% / 0.7));
-    --gradient-glow: radial-gradient(ellipse at center, hsl(0 86% 44% / 0.3), hsl(210 100% 56% / 0.2), transparent 70%);
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 86% 8%), hsl(210 100% 8%));
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 15% 12%), hsl(0 10% 10%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 12% / 0.9), hsl(0 10% 15% / 0.7));
+    --gradient-glow-muted: radial-gradient(ellipse at center, hsl(0 40% 25% / 0.2), hsl(210 50% 30% / 0.15), transparent 70%);
+    --gradient-hero-new: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 20% 12%), hsl(0 15% 10%));
     
-    --shadow-glow: 0 0 40px hsl(0 86% 44% / 0.5), 0 0 80px hsl(210 100% 56% / 0.3);
-    --shadow-card: 0 20px 40px -10px hsl(0 0% 8% / 0.9), 0 0 25px hsl(0 86% 44% / 0.2);
-    --shadow-elevated: 0 30px 60px -10px hsl(0 0% 8% / 0.95), 0 0 50px hsl(0 86% 44% / 0.4);
-    --shadow-primary: 0 0 30px hsl(0 86% 44% / 0.6);
+    --shadow-glow: 0 0 40px hsl(0 40% 25% / 0.3), 0 0 80px hsl(210 60% 30% / 0.2);
+    --shadow-card: 0 20px 40px -10px hsl(0 0% 8% / 0.9), 0 0 25px hsl(0 40% 25% / 0.15);
+    --shadow-elevated: 0 30px 60px -10px hsl(0 0% 8% / 0.95), 0 0 50px hsl(0 40% 25% / 0.25);
+    --shadow-primary: 0 0 30px hsl(0 40% 25% / 0.4);
     --shadow-secondary: 0 0 30px hsl(210 100% 56% / 0.6);
     --shadow-accent: 0 0 30px hsl(0 0% 20% / 0.5);
   }
@@ -82,34 +83,13 @@
   }
 }
 
-/* Netflix-Style Components & Utilities */
+/* Clean Components & Utilities */
 @layer components {
-  /* Netflix Name Styling with Curve Effect */
-  .netflix-name-container {
+  /* Clean Name Container */
+  .name-container {
     @apply flex flex-col items-center justify-center;
   }
 
-  .netflix-curve-effect {
-    position: relative;
-    display: inline-block;
-    text-shadow: 0 0 20px hsl(0 86% 44% / 0.8);
-    transform: perspective(300px) rotateX(5deg);
-    letter-spacing: 0.1em;
-  }
-
-  .netflix-curve-effect::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(90deg, transparent 0%, hsl(0 86% 44% / 0.1) 15%, hsl(0 86% 44% / 0.1) 85%, transparent 100%);
-    border-radius: 8px;
-    z-index: -1;
-  }
-
-  /* ... keep existing code (hero-gradient, card-glow, glow-effect, text-gradient-primary, btn styles, animations) the same */
   .hero-gradient {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
@@ -138,7 +118,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: var(--gradient-glow);
+    background: var(--gradient-glow-muted);
     border-radius: inherit;
     z-index: -1;
     opacity: 0;
@@ -154,6 +134,18 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+
+  /* Muted button styles */
+  .muted-button {
+    @apply bg-red-900 text-foreground hover:bg-red-800 shadow-lg;
+    box-shadow: 0 0 20px hsl(0 40% 25% / 0.3);
+    transition: var(--transition-smooth);
+  }
+
+  .muted-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px hsl(0 40% 25% / 0.4);
   }
 
   .btn-primary {
@@ -189,6 +181,17 @@
     box-shadow: 0 0 30px hsl(var(--primary) / 0.4);
   }
 
+  .btn-outline-muted {
+    @apply border-red-700 text-red-700 hover:bg-red-700 hover:text-foreground;
+    background: transparent;
+    transition: var(--transition-smooth);
+    box-shadow: 0 0 20px hsl(0 50% 40% / 0.2);
+  }
+
+  .btn-outline-muted:hover {
+    box-shadow: 0 0 30px hsl(0 50% 40% / 0.4);
+  }
+
   .floating-animation {
     animation: float 6s ease-in-out infinite;
   }
@@ -197,18 +200,22 @@
     animation: pulseGlow 3s ease-in-out infinite;
   }
 
+  .pulse-glow-muted {
+    animation: pulseGlowMuted 3s ease-in-out infinite;
+  }
+
   .neon-glow {
     text-shadow: 0 0 10px hsl(var(--primary) / 0.8);
   }
 
   .netflix-button {
-    @apply bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-md;
+    @apply bg-red-900 text-foreground font-semibold px-6 py-3 rounded-md;
     transition: var(--transition-smooth);
     box-shadow: 0 4px 8px hsl(0 0% 0% / 0.3);
   }
 
   .netflix-button:hover {
-    @apply bg-primary/90;
+    @apply bg-red-800;
     transform: translateY(-2px);
     box-shadow: 0 8px 16px hsl(0 0% 0% / 0.4);
   }
@@ -238,17 +245,9 @@
   .font-mono {
     font-family: 'JetBrains Mono', 'Courier New', monospace;
   }
-
-  .font-netflix {
-    font-family: 'Bebas Neue', 'Arial Black', sans-serif;
-  }
-
-  .font-netflix-alt {
-    font-family: 'Oswald', 'Arial Black', sans-serif;
-  }
 }
 
-/* ... keep existing code (Enhanced Animations keyframes and classes) the same */
+/* Enhanced Animations */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
@@ -260,6 +259,15 @@
   }
   50% { 
     box-shadow: 0 0 50px hsl(var(--primary) / 0.8);
+  }
+}
+
+@keyframes pulseGlowMuted {
+  0%, 100% { 
+    box-shadow: 0 0 20px hsl(0 50% 40% / 0.4);
+  }
+  50% { 
+    box-shadow: 0 0 50px hsl(0 50% 40% / 0.6);
   }
 }
 

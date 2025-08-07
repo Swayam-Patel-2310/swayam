@@ -34,13 +34,11 @@ const Hero = () => {
             </div>
             
             <div className="text-xl lg:text-2xl text-muted-foreground font-normal max-w-2xl">
-              I'm a data scientist
+              Data Scientist
             </div>
 
-            <div className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-              A freelancer who provides services for data science, machine learning, 
-              and analytics content needs, for all businesses with more than 3 
-              years of experience
+            <div className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
+              A Data Scientist with a passion for machine learning, AI, and data analysis. Skilled in Python, R, SQL, and cloud technologies, I've worked on projects ranging from NLP and computer vision to predictive analytics and data visualization. I'm driven by solving real-world problems through innovative solutions and am always eager to learn and collaborate.
             </div>
           </div>
 

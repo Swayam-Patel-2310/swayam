@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -40,27 +41,36 @@ const Contact = () => {
       // Initialize EmailJS with your public key
       emailjs.init('F6CH3EkXd-RdQxN2u');
 
-      // Send email with corrected template variables that match EmailJS template
+      // Send email with the exact template variables that EmailJS expects
       await emailjs.send(
         'service_2qj16xk',
         'template_tvlww49',
         {
-          // Use the exact variable names that your EmailJS template expects
-          to_name: 'Swayam Patel',
+          // Standard EmailJS template variables
           from_name: formData.name,
           from_email: formData.email,
-          reply_to: formData.email,
+          to_name: 'Swayam Patel',
           subject: formData.subject,
           message: formData.message,
-          // Additional common template variables
+          reply_to: formData.email,
+          // Additional variables that might be expected
           user_name: formData.name,
           user_email: formData.email,
-          user_subject: formData.subject,
-          user_message: formData.message,
+          contact_name: formData.name,
+          contact_email: formData.email,
           sender_name: formData.name,
-          sender_email: formData.email
+          sender_email: formData.email,
+          email: formData.email,
+          name: formData.name
         }
       );
+
+      console.log('Email sent successfully with data:', {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message
+      });
 
       toast({
         title: "Message Sent Successfully!",
@@ -122,7 +132,7 @@ const Contact = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Let's <span className="text-gradient-primary neon-glow">Connect</span>
+            Let's <span className="text-gradient-primary neon-glow">Talk</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Ready to discuss data science opportunities, collaborations, or just have a chat about technology

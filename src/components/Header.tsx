@@ -17,9 +17,9 @@ const Header = () => {
 
   const navItems = [
     { label: 'Home', href: '#home', icon: Play },
-    { label: 'About', href: '#about', icon: Star },
-    { label: 'Projects', href: '#projects', icon: Play },
-    { label: 'Skills', href: '#skills', icon: Star },
+    { label: 'Services', href: '#about', icon: Star },
+    { label: 'Blog', href: '#projects', icon: Play },
+    { label: 'Portfolio', href: '#projects', icon: Star },
     { label: 'Contact', href: '#contact', icon: Play },
   ];
 
@@ -35,8 +35,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="text-2xl font-bold">
-            <span className="text-gradient-primary neon-glow">Swayam</span>
-            <span className="text-foreground">.dev</span>
+            <span className="text-foreground">Logo</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -45,35 +44,23 @@ const Header = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium hover:neon-glow flex items-center gap-2"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium hover:neon-glow"
               >
-                <item.icon className="w-4 h-4" />
                 {item.label}
               </a>
             ))}
           </div>
 
-          {/* Action Buttons */}
+          {/* Let's Talk Button */}
           <div className="hidden md:flex items-center space-x-4">
             <Button
-              variant="ghost"
-              size="sm"
-              className="text-muted-foreground hover:text-primary"
-              asChild
+              className="btn-primary"
+              onClick={() => {
+                const element = document.getElementById('contact');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
-              <a href="https://github.com/Swayam-Patel-2310" target="_blank" rel="noopener noreferrer">
-                <Github className="w-5 h-5" />
-              </a>
-            </Button>
-            <Button
-              variant="ghost"
-              size="sm"
-              className="text-muted-foreground hover:text-primary"
-              asChild
-            >
-              <a href="https://www.linkedin.com/in/swayammpatel" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="w-5 h-5" />
-              </a>
+              Let's Talk
             </Button>
           </div>
 
@@ -100,35 +87,22 @@ const Header = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium flex items-center gap-2"
+                  className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <item.icon className="w-4 h-4" />
                   {item.label}
                 </a>
               ))}
-              <div className="flex items-center space-x-4 pt-4">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="text-muted-foreground hover:text-primary"
-                  asChild
-                >
-                  <a href="https://github.com/Swayam-Patel-2310" target="_blank" rel="noopener noreferrer">
-                    <Github className="w-5 h-5" />
-                  </a>
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="text-muted-foreground hover:text-primary"
-                  asChild
-                >
-                  <a href="https://www.linkedin.com/in/swayammpatel" target="_blank" rel="noopener noreferrer">
-                    <Linkedin className="w-5 h-5" />
-                  </a>
-                </Button>
-              </div>
+              <Button
+                className="btn-primary mt-4"
+                onClick={() => {
+                  const element = document.getElementById('contact');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                Let's Talk
+              </Button>
             </div>
           </div>
         )}

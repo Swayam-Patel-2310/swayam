@@ -39,28 +39,12 @@ const Header = () => {
               {/* Custom SP Logo Container */}
               <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg transform rotate-12">
                 <div className="relative transform -rotate-12">
-                  {/* Custom SP Design - Flowing Style */}
-                  <svg 
-                    width="32" 
-                    height="32" 
-                    viewBox="0 0 32 32" 
-                    className="text-white"
-                    fill="currentColor"
-                  >
-                    {/* S Shape - Flowing Modern Design */}
-                    <path d="M6 10 C6 8, 8 6, 12 6 L16 6 C18 6, 20 8, 20 10 C20 12, 18 14, 16 14 L14 14 C12 14, 10 16, 10 18 C10 20, 12 22, 14 22 L18 22 C20 22, 22 20, 22 18" 
-                          stroke="currentColor" 
-                          strokeWidth="3" 
-                          strokeLinecap="round" 
-                          fill="none" />
-                    
-                    {/* P Shape - Flowing Modern Design */}
-                    <path d="M26 6 L26 26 M26 6 L30 6 C32 6, 34 8, 34 10 L34 12 C34 14, 32 16, 30 16 L26 16" 
-                          stroke="currentColor" 
-                          strokeWidth="3" 
-                          strokeLinecap="round" 
-                          fill="none" />
-                  </svg>
+                  {/* Using the exact icon image */}
+                  <img 
+                    src="/lovable-uploads/1c558c8c-a18f-4826-9b93-abf5848268cc.png" 
+                    alt="SP Logo"
+                    className="w-8 h-8 object-contain"
+                  />
                 </div>
               </div>
               {/* Enhanced Glow Effect */}

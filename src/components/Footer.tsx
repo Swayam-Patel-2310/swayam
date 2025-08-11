@@ -80,9 +80,7 @@ const Footer = () => {
               © {currentYear} Swayam Patel. All rights reserved.
             </p>
             <div className="flex items-center text-muted-foreground text-sm mt-4 md:mt-0">
-              <span>Built with</span>
-              <Heart className="w-4 h-4 mx-1 text-red-500" />
-              <span>using React & TypeScript</span>
+              
             </div>
           </div>
         </div>

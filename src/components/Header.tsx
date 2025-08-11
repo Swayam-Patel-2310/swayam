@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Github, Linkedin, Star, Play } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Star, Play, Database, Brain } from 'lucide-react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,9 +33,29 @@ const Header = () => {
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="text-2xl font-bold">
-            <span className="text-foreground">Logo</span>
+          {/* Custom Logo */}
+          <div className="flex items-center space-x-3">
+            <div className="relative">
+              {/* Logo Icon Container */}
+              <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center shadow-lg">
+                <div className="relative">
+                  <Database className="w-6 h-6 text-black absolute -translate-x-1 -translate-y-1" />
+                  <Brain className="w-6 h-6 text-black translate-x-1 translate-y-1" />
+                </div>
+              </div>
+              {/* Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-primary rounded-lg blur-md opacity-30 -z-10"></div>
+            </div>
+            
+            {/* Logo Text */}
+            <div className="flex flex-col">
+              <div className="text-xl font-bold text-gradient-primary font-inter">
+                SwayamWorks
+              </div>
+              <div className="text-xs text-muted-foreground font-medium tracking-wider">
+                .online
+              </div>
+            </div>
           </div>
 
           {/* Desktop Navigation */}

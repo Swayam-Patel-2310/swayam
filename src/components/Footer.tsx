@@ -10,8 +10,8 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="text-2xl font-bold">
-              <span className="text-gradient-primary">Swayam</span>
-              <span className="text-foreground">.dev</span>
+              <span className="text-gradient-primary">SwayamWorks</span>
+              <span className="text-foreground">.online</span>
             </div>
             <p className="text-muted-foreground">
               Data scientist passionate about transforming complex data into actionable insights.

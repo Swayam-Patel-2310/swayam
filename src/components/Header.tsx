@@ -33,18 +33,26 @@ const Header = () => {
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Custom Logo */}
+          {/* Custom SP Logo */}
           <div className="flex items-center space-x-3">
             <div className="relative">
-              {/* Logo Icon Container with Unique Design */}
+              {/* Custom SP Logo Container */}
               <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg transform rotate-12">
                 <div className="relative transform -rotate-12">
-                  {/* Background Circle for Brain */}
-                  <div className="w-8 h-8 bg-black/20 rounded-full absolute inset-0 flex items-center justify-center">
-                    <Brain className="w-5 h-5 text-black" />
-                  </div>
-                  {/* Database Icon positioned uniquely */}
-                  <Database className="w-4 h-4 text-black absolute -bottom-1 -right-1 bg-primary rounded-sm p-0.5" />
+                  {/* Custom SP Design */}
+                  <svg 
+                    width="32" 
+                    height="32" 
+                    viewBox="0 0 32 32" 
+                    className="text-black"
+                    fill="currentColor"
+                  >
+                    {/* S Shape - Angular Design */}
+                    <path d="M6 8 L18 8 L18 12 L10 12 L10 16 L18 16 L18 20 L10 20 L10 24 L22 24 L22 28 L6 28 L6 24 L14 24 L14 20 L6 20 L6 16 L14 16 L14 12 L6 12 Z" />
+                    
+                    {/* P Shape - Angular Design */}
+                    <path d="M24 8 L24 28 L28 28 L28 20 L30 20 L30 16 L28 16 L28 12 L30 12 L30 8 Z M28 12 L28 16 L26 16 L26 12 Z" />
+                  </svg>
                 </div>
               </div>
               {/* Enhanced Glow Effect */}

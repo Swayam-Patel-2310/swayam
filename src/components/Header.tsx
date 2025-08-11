@@ -36,15 +36,19 @@ const Header = () => {
           {/* Custom Logo */}
           <div className="flex items-center space-x-3">
             <div className="relative">
-              {/* Logo Icon Container */}
-              <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center shadow-lg">
-                <div className="relative">
-                  <Database className="w-6 h-6 text-black absolute -translate-x-1 -translate-y-1" />
-                  <Brain className="w-6 h-6 text-black translate-x-1 translate-y-1" />
+              {/* Logo Icon Container with Unique Design */}
+              <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg transform rotate-12">
+                <div className="relative transform -rotate-12">
+                  {/* Background Circle for Brain */}
+                  <div className="w-8 h-8 bg-black/20 rounded-full absolute inset-0 flex items-center justify-center">
+                    <Brain className="w-5 h-5 text-black" />
+                  </div>
+                  {/* Database Icon positioned uniquely */}
+                  <Database className="w-4 h-4 text-black absolute -bottom-1 -right-1 bg-primary rounded-sm p-0.5" />
                 </div>
               </div>
-              {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-primary rounded-lg blur-md opacity-30 -z-10"></div>
+              {/* Enhanced Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-primary rounded-xl blur-lg opacity-40 -z-10 transform rotate-12"></div>
             </div>
             
             {/* Logo Text */}

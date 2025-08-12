@@ -33,25 +33,38 @@ const Header = () => {
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Integrated SP Logo */}
+          {/* SP Logo with website theme integration */}
           <div className="flex items-center space-x-3">
             <div className="relative">
-              {/* Logo Container with theme integration */}
-              <div className="w-12 h-12 bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border border-primary/30 rounded-xl flex items-center justify-center shadow-glow backdrop-blur-sm">
-                <div className="relative">
-                  {/* Using the provided icon with theme filters */}
-                  <img 
-                    src="/lovable-uploads/3a1b88c7-4503-4402-8a5f-39e24a694718.png" 
-                    alt="SP Logo"
-                    className="w-8 h-8 object-contain brightness-110 contrast-125"
-                    style={{
-                      filter: 'hue-rotate(15deg) saturate(1.2) brightness(1.1)'
-                    }}
-                  />
+              {/* Logo Container with dark gradient theme */}
+              <div className="w-12 h-12 bg-gradient-to-br from-amber-600/20 via-orange-500/10 to-background border border-amber-500/30 rounded-xl flex items-center justify-center shadow-glow backdrop-blur-sm relative overflow-hidden">
+                {/* Dark gradient background matching website theme */}
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black"></div>
+                
+                {/* SP Logo recreated with website colors */}
+                <div className="relative z-10 w-8 h-8 flex items-center justify-center">
+                  <svg 
+                    viewBox="0 0 100 100" 
+                    className="w-full h-full"
+                    style={{ filter: 'drop-shadow(0 0 4px rgba(251, 191, 36, 0.3))' }}
+                  >
+                    {/* S shape with white/amber tint */}
+                    <path 
+                      d="M25 25 Q45 5, 65 25 Q75 35, 65 45 L45 45 Q35 35, 45 25 Q55 15, 65 25 Q75 35, 65 45 L35 45 Q15 35, 25 25 Z M35 55 Q25 65, 35 75 L65 75 Q85 65, 75 55 Q65 45, 55 55 L55 75 Q45 85, 35 75 Q25 65, 35 55 Z" 
+                      fill="rgba(255, 255, 255, 0.95)"
+                      className="drop-shadow-sm"
+                    />
+                    {/* P shape with white/amber tint */}
+                    <path 
+                      d="M45 25 L45 75 L55 75 L55 55 L65 55 Q75 45, 65 35 L55 35 L55 25 L45 25 Z M55 35 L65 35 Q70 40, 65 45 L55 45 L55 35 Z" 
+                      fill="rgba(255, 255, 255, 0.95)"
+                      className="drop-shadow-sm"
+                    />
+                  </svg>
                 </div>
               </div>
-              {/* Subtle glow effect matching theme */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/5 rounded-xl blur-md opacity-50 -z-10"></div>
+              {/* Amber glow effect matching website theme */}
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-orange-600/10 rounded-xl blur-md opacity-60 -z-10"></div>
             </div>
             
             {/* Logo Text */}

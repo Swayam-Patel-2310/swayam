@@ -33,9 +33,9 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Brand */}
           <a href="#home" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 flex items-center justify-center rounded-xl border border-amber-500/30 shadow-glow overflow-hidden">
+            <div className="w-12 h-12 flex items-center justify-center rounded-xl border border-amber-500/30 shadow-[0_0_10px_rgba(251,191,36,0.35)] overflow-hidden bg-gradient-to-br from-[#0e0e0f] to-[#171718]">
               <Image
-                src="/LogoSP.png" // your saved file in /public
+                src="/LogoSP.png?v=3"   // cache-bust to force refresh
                 alt="SwayamWorks Logo"
                 width={44}
                 height={44}
@@ -87,7 +87,8 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen((v) => !v)}
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? <Menu className="hidden" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen && <X className="w-6 h-6" />}
           </Button>
         </div>
 

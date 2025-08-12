@@ -1,7 +1,7 @@
+// src/components/Header.tsx
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
-import Image from 'next/image';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,6 +21,12 @@ const Header = () => {
     { label: 'Contact', href: '#contact' },
   ];
 
+  const handleSmoothScroll = (href: string) => {
+    const id = href.replace('#', '');
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -32,15 +38,23 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Brand */}
-          <a href="#home" className="flex items-center gap-3 group">
+          <a
+            href="#home"
+            className="flex items-center gap-3 group"
+            onClick={(e) => {
+              e.preventDefault();
+              handleSmoothScroll('#home');
+            }}
+          >
             <div className="w-12 h-12 flex items-center justify-center rounded-xl border border-amber-500/30 shadow-[0_0_10px_rgba(251,191,36,0.35)] overflow-hidden bg-gradient-to-br from-[#0e0e0f] to-[#171718]">
-              <Image
-                src="/LogoSP.png?v=3"   // cache-bust to force refresh
+              <img
+                src="/LogoSP.png?v=3" // served from /public
                 alt="SwayamWorks Logo"
                 width={44}
                 height={44}
                 className="object-contain"
-                priority
+                loading="eager"
+                decoding="async"
               />
             </div>
 
@@ -61,6 +75,10 @@ const Header = () => {
                 key={item.label}
                 href={item.href}
                 className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium hover:neon-glow"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSmoothScroll(item.href);
+                }}
               >
                 {item.label}
               </a>
@@ -71,11 +89,9 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-4">
             <Button
               className="btn-primary"
-              onClick={() => {
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-              }}
+              onClick={() => handleSmoothScroll('#contact')}
             >
-              Let's Talk
+              Let&apos;s Talk
             </Button>
           </div>
 
@@ -86,22 +102,30 @@ const Header = () => {
             className="md:hidden"
             onClick={() => setIsMobileMenuOpen((v) => !v)}
             aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
-            {isMobileMenuOpen ? <Menu className="hidden" /> : <Menu className="w-6 h-6" />}
-            {isMobileMenuOpen && <X className="w-6 h-6" />}
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </Button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pt-4 border-t border-border">
+          <div
+            id="mobile-menu"
+            className="md:hidden mt-4 pt-4 border-t border-border"
+          >
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
                   className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleSmoothScroll(item.href);
+                    setIsMobileMenuOpen(false);
+                  }}
                 >
                   {item.label}
                 </a>
@@ -109,11 +133,11 @@ const Header = () => {
               <Button
                 className="btn-primary mt-2"
                 onClick={() => {
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  handleSmoothScroll('#contact');
                   setIsMobileMenuOpen(false);
                 }}
               >
-                Let's Talk
+                Let&apos;s Talk
               </Button>
             </div>
           </div>

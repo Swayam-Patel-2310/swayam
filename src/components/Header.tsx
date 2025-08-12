@@ -36,33 +36,41 @@ const Header = () => {
           {/* SP Logo with website theme integration */}
           <div className="flex items-center space-x-3">
             <div className="relative">
-              {/* Logo Container with dark gradient theme */}
+              {/* Logo Container with dark theme */}
               <div className="w-12 h-12 bg-gradient-to-br from-gray-900 via-gray-800 to-black border border-amber-500/30 rounded-xl flex items-center justify-center shadow-glow backdrop-blur-sm relative overflow-hidden">
-                {/* SP Logo with amber/orange colors */}
+                {/* SP Logo recreated to match the provided design */}
                 <div className="relative z-10 w-8 h-8 flex items-center justify-center">
                   <svg 
                     viewBox="0 0 100 100" 
                     className="w-full h-full"
                     style={{ filter: 'drop-shadow(0 0 6px rgba(251, 191, 36, 0.4))' }}
                   >
-                    {/* S shape in amber/orange */}
+                    {/* Modern "S" shape with gradient */}
+                    <defs>
+                      <linearGradient id="spGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#f59e0b" />
+                        <stop offset="50%" stopColor="#f97316" />
+                        <stop offset="100%" stopColor="#ea580c" />
+                      </linearGradient>
+                    </defs>
+                    
+                    {/* S shape - sleek and modern */}
                     <path 
-                      d="M20 30 C20 20, 30 15, 40 20 C45 22, 48 25, 48 30 C48 35, 45 38, 40 40 L35 40 C30 40, 25 35, 25 30 C25 25, 30 22, 35 25 L40 25 C45 25, 50 30, 50 35 C50 40, 45 43, 40 45 L25 45 C15 45, 10 40, 10 30 C10 20, 15 15, 25 15 L45 15 C55 15, 60 20, 60 30 M20 55 C15 55, 10 60, 15 65 L35 65 C45 65, 50 70, 45 75 C40 78, 35 75, 35 70 C35 65, 40 62, 45 65 L50 65 C55 65, 60 70, 55 75 C50 78, 45 80, 40 75 L25 75 C15 75, 10 70, 15 65 C20 60, 25 55, 35 55 L50 55 C60 55, 65 60, 60 70" 
-                      fill="#f59e0b"
-                      stroke="#f59e0b"
-                      strokeWidth="1"
+                      d="M20 25 C20 15, 30 10, 45 15 C55 18, 60 25, 60 35 C60 42, 55 48, 45 50 L35 52 C30 53, 28 55, 30 58 C32 61, 38 62, 45 60 L60 55 L65 65 C55 70, 40 72, 30 68 C15 62, 12 50, 20 40 C25 35, 35 32, 45 30 L55 28 C60 27, 62 25, 60 22 C58 19, 52 18, 45 20 L30 25 Z" 
+                      fill="url(#spGradient)"
+                      strokeWidth="0"
                     />
-                    {/* P shape in amber/orange */}
+                    
+                    {/* P shape - matching the modern style */}
                     <path 
-                      d="M55 20 L55 80 L65 80 L65 55 L75 55 C85 55, 90 50, 85 40 C80 30, 75 25, 65 25 L65 20 L55 20 Z M65 30 L75 30 C80 30, 82 35, 80 40 C78 45, 75 47, 70 45 L65 45 L65 30 Z" 
-                      fill="#f59e0b"
-                      stroke="#f59e0b"
-                      strokeWidth="1"
+                      d="M70 15 L70 85 L60 85 L60 55 L45 55 C35 55, 30 50, 30 40 C30 30, 35 25, 45 25 L60 25 L60 15 L70 15 Z M60 35 L45 35 C42 35, 40 37, 40 40 C40 43, 42 45, 45 45 L60 45 L60 35 Z" 
+                      fill="url(#spGradient)"
+                      strokeWidth="0"
                     />
                   </svg>
                 </div>
               </div>
-              {/* Amber glow effect matching website theme */}
+              {/* Amber glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-orange-600/10 rounded-xl blur-md opacity-60 -z-10"></div>
             </div>
             

@@ -37,28 +37,27 @@ const Header = () => {
           <div className="flex items-center space-x-3">
             <div className="relative">
               {/* Logo Container with dark gradient theme */}
-              <div className="w-12 h-12 bg-gradient-to-br from-amber-600/20 via-orange-500/10 to-background border border-amber-500/30 rounded-xl flex items-center justify-center shadow-glow backdrop-blur-sm relative overflow-hidden">
-                {/* Dark gradient background matching website theme */}
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black"></div>
-                
-                {/* SP Logo recreated with website colors */}
+              <div className="w-12 h-12 bg-gradient-to-br from-gray-900 via-gray-800 to-black border border-amber-500/30 rounded-xl flex items-center justify-center shadow-glow backdrop-blur-sm relative overflow-hidden">
+                {/* SP Logo with amber/orange colors */}
                 <div className="relative z-10 w-8 h-8 flex items-center justify-center">
                   <svg 
                     viewBox="0 0 100 100" 
                     className="w-full h-full"
-                    style={{ filter: 'drop-shadow(0 0 4px rgba(251, 191, 36, 0.3))' }}
+                    style={{ filter: 'drop-shadow(0 0 6px rgba(251, 191, 36, 0.4))' }}
                   >
-                    {/* S shape with white/amber tint */}
+                    {/* S shape in amber/orange */}
                     <path 
-                      d="M25 25 Q45 5, 65 25 Q75 35, 65 45 L45 45 Q35 35, 45 25 Q55 15, 65 25 Q75 35, 65 45 L35 45 Q15 35, 25 25 Z M35 55 Q25 65, 35 75 L65 75 Q85 65, 75 55 Q65 45, 55 55 L55 75 Q45 85, 35 75 Q25 65, 35 55 Z" 
-                      fill="rgba(255, 255, 255, 0.95)"
-                      className="drop-shadow-sm"
+                      d="M20 30 C20 20, 30 15, 40 20 C45 22, 48 25, 48 30 C48 35, 45 38, 40 40 L35 40 C30 40, 25 35, 25 30 C25 25, 30 22, 35 25 L40 25 C45 25, 50 30, 50 35 C50 40, 45 43, 40 45 L25 45 C15 45, 10 40, 10 30 C10 20, 15 15, 25 15 L45 15 C55 15, 60 20, 60 30 M20 55 C15 55, 10 60, 15 65 L35 65 C45 65, 50 70, 45 75 C40 78, 35 75, 35 70 C35 65, 40 62, 45 65 L50 65 C55 65, 60 70, 55 75 C50 78, 45 80, 40 75 L25 75 C15 75, 10 70, 15 65 C20 60, 25 55, 35 55 L50 55 C60 55, 65 60, 60 70" 
+                      fill="#f59e0b"
+                      stroke="#f59e0b"
+                      strokeWidth="1"
                     />
-                    {/* P shape with white/amber tint */}
+                    {/* P shape in amber/orange */}
                     <path 
-                      d="M45 25 L45 75 L55 75 L55 55 L65 55 Q75 45, 65 35 L55 35 L55 25 L45 25 Z M55 35 L65 35 Q70 40, 65 45 L55 45 L55 35 Z" 
-                      fill="rgba(255, 255, 255, 0.95)"
-                      className="drop-shadow-sm"
+                      d="M55 20 L55 80 L65 80 L65 55 L75 55 C85 55, 90 50, 85 40 C80 30, 75 25, 65 25 L65 20 L55 20 Z M65 30 L75 30 C80 30, 82 35, 80 40 C78 45, 75 47, 70 45 L65 45 L65 30 Z" 
+                      fill="#f59e0b"
+                      stroke="#f59e0b"
+                      strokeWidth="1"
                     />
                   </svg>
                 </div>

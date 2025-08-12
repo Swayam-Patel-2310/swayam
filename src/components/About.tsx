@@ -1,11 +1,12 @@
+
 import { Card } from '@/components/ui/card';
-import { GraduationCap, MapPin, Calendar, Target } from 'lucide-react';
+import { GraduationCap, MapPin, Calendar, Target, Briefcase } from 'lucide-react';
 
 const About = () => {
   return (
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Main Content */}
           <div className="space-y-8">
             <div className="space-y-4">
@@ -51,6 +52,35 @@ const About = () => {
 
           {/* Right Column - Info Cards */}
           <div className="space-y-6">
+            {/* Work Experience Card */}
+            <Card className="card-glow p-6">
+              <div className="flex items-start space-x-4 mb-4">
+                <div className="bg-primary/10 p-3 rounded-lg">
+                  <Briefcase className="w-6 h-6 text-primary" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold mb-2">Work Experience</h3>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div>
+                  <div className="flex justify-between items-start mb-2">
+                    <div>
+                      <p className="font-semibold text-primary">Data Science Intern</p>
+                      <p className="text-sm text-muted-foreground">Focus Bear</p>
+                    </div>
+                    <span className="text-xs text-muted-foreground">Mar - Jun 2025</span>
+                  </div>
+                  <ul className="text-sm text-muted-foreground space-y-1 ml-4">
+                    <li>• Developed Retention Breakdown module for Cohort Analytics Dashboard serving 1000+ users</li>
+                    <li>• Built interactive heatmaps using Python (Dash, Plotly, Pandas)</li>
+                    <li>• Optimized data pipeline reducing retrieval time from 5+ to <2 minutes</li>
+                    <li>• Delivered production-ready analytics tool with automated data ingestion</li>
+                  </ul>
+                </div>
+              </div>
+            </Card>
+
             {/* Education Card */}
             <Card className="card-glow p-6">
               <div className="flex items-start space-x-4">

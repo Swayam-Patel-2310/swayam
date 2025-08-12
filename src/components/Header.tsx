@@ -33,22 +33,25 @@ const Header = () => {
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Custom SP Logo */}
+          {/* Integrated SP Logo */}
           <div className="flex items-center space-x-3">
             <div className="relative">
-              {/* Custom SP Logo Container */}
-              <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-lg transform rotate-12">
-                <div className="relative transform -rotate-12">
-                  {/* Using the exact icon image */}
+              {/* Logo Container with theme integration */}
+              <div className="w-12 h-12 bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border border-primary/30 rounded-xl flex items-center justify-center shadow-glow backdrop-blur-sm">
+                <div className="relative">
+                  {/* Using the provided icon with theme filters */}
                   <img 
-                    src="/lovable-uploads/1c558c8c-a18f-4826-9b93-abf5848268cc.png" 
+                    src="/lovable-uploads/3a1b88c7-4503-4402-8a5f-39e24a694718.png" 
                     alt="SP Logo"
-                    className="w-8 h-8 object-contain"
+                    className="w-8 h-8 object-contain brightness-110 contrast-125"
+                    style={{
+                      filter: 'hue-rotate(15deg) saturate(1.2) brightness(1.1)'
+                    }}
                   />
                 </div>
               </div>
-              {/* Enhanced Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-primary rounded-xl blur-lg opacity-40 -z-10 transform rotate-12"></div>
+              {/* Subtle glow effect matching theme */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/5 rounded-xl blur-md opacity-50 -z-10"></div>
             </div>
             
             {/* Logo Text */}

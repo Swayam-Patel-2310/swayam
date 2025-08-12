@@ -74,7 +74,7 @@ const About = () => {
                   <ul className="text-sm text-muted-foreground space-y-1 ml-4">
                     <li>• Developed Retention Breakdown module for Cohort Analytics Dashboard serving 1000+ users</li>
                     <li>• Built interactive heatmaps using Python (Dash, Plotly, Pandas)</li>
-                    <li>• Optimized data pipeline reducing retrieval time from 5+ to <2 minutes</li>
+                    <li>• Optimized data pipeline reducing retrieval time from 5+ to under 2 minutes</li>
                     <li>• Delivered production-ready analytics tool with automated data ingestion</li>
                   </ul>
                 </div>
